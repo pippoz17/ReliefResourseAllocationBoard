@@ -1,0 +1,27 @@
+RELIEF RESOURCE ALLOCATION BOARD - READY PROJECT
+
+1. Open this entire folder in VS Code.
+2. Open Terminal in this folder.
+3. Create virtual environment:
+   python -m venv .venv
+4. Install packages:
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+5. Create MySQL database:
+   CREATE DATABASE relief_board CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+6. Copy .env.example to .env and enter your MySQL password.
+7. Create tables:
+   .venv\Scripts\python.exe setup_db.py
+8. Seed demo data:
+   .venv\Scripts\python.exe seed.py
+9. Run website:
+   .venv\Scripts\python.exe -m uvicorn app:app --reload
+10. Open http://127.0.0.1:8000
+
+Demo login:
+coordinator@relief.local
+Password: demo123
+
+IMPORTANT:
+- Do NOT open the ZIP file inside VS Code.
+- Extract this folder first, then File -> Open Folder in VS Code.
+- Replace DB_PASSWORD in .env with your actual MySQL password.
